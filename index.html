@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio website for Harsh Chaudhary, B.Tech CSE AI/ML student focused on artificial intelligence, backend development, computer vision, and data analytics."
+    />
+    <title>Harsh Chaudhary | AI/ML Portfolio</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b1117'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='%2365e6f4' font-family='Arial' font-size='24' font-weight='800'%3EHC%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" id="top">
+        <a class="brand" href="#home" aria-label="Harsh Chaudhary home">
+          <span class="brand-mark">HC</span>
+          <span class="brand-text">Harsh Chaudhary</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero section-panel" id="home" aria-label="Portfolio introduction">
+          <canvas class="hero-canvas" aria-hidden="true"></canvas>
+          <div class="hero-media" aria-hidden="true"></div>
+          <div class="hero-overlay" aria-hidden="true"></div>
+
+          <div class="hero-content reveal is-visible">
+            <p class="eyebrow">AI/ML Student | Backend Developer | Computer Vision Enthusiast</p>
+            <h1>Building intelligent systems that turn data into usable software.</h1>
+            <p class="hero-copy">
+              I am a B.Tech Computer Science Engineering student specializing in AI/ML, with practical
+              work across Python, MySQL, OpenCV, TensorFlow/Keras, Spring Boot, REST APIs, and data analytics.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">
+                <span class="button-icon" aria-hidden="true">&gt;</span>
+                View Projects
+              </a>
+              <a class="button button-secondary download-link" href="assets/Harsh_Chaudhary_Resume.pdf" download>
+                <span class="button-icon" aria-hidden="true">DL</span>
+                Download Resume
+              </a>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="stats-strip" aria-label="Portfolio highlights">
+          <div class="reveal">
+            <strong>AI/ML</strong>
+            <span>Computer Vision</span>
+          </div>
+          <div class="reveal">
+            <strong>Backend</strong>
+            <span>Java, Spring Boot, Kafka</span>
+          </div>
+          <div class="reveal">
+            <strong>Analytics</strong>
+            <span>Python, SQL, Pandas</span>
+          </div>
+        </section>
+
+        <section class="section section-about" id="about">
+          <div class="section-heading reveal">
+            <p class="eyebrow">About</p>
+            <h2>Curious engineer with a practical AI mindset.</h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-copy reveal">
+              <p>
+                I am motivated by real-world problem solving and the craft of turning an idea into a working
+                system. My interests sit at the intersection of artificial intelligence, backend development,
+                computer vision, and data analytics.
+              </p>
+              <p>
+                I enjoy building projects that combine structured data, clean backend logic, and intelligent
+                models. I am currently deepening my fundamentals in data structures, DBMS, operating systems,
+                computer networks, and object-oriented programming.
+              </p>
+            </div>
+            <div class="focus-list reveal" aria-label="Current focus areas">
+              <article>
+                <span>01</span>
+                <h3>Applied AI</h3>
+                <p>Working with OpenCV, TensorFlow/Keras, image preprocessing, and model evaluation.</p>
+              </article>
+              <article>
+                <span>02</span>
+                <h3>Backend Systems</h3>
+                <p>Building REST APIs, transaction flows, Kafka consumers, and database-backed services.</p>
+              </article>
+              <article>
+                <span>03</span>
+                <h3>Data Insight</h3>
+                <p>Using SQL and Pandas to turn academic and lifestyle data into performance insights.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-alt" id="skills">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Skills</p>
+            <h2>Technical stack and core foundations.</h2>
+          </div>
+          <div class="skills-grid">
+            <article class="skill-card reveal">
+              <h3>Programming</h3>
+              <div class="tags">
+                <span>Python</span>
+                <span>SQL</span>
+                <span>Java Basic</span>
+                <span>C++ Basic</span>
+              </div>
+            </article>
+            <article class="skill-card reveal">
+              <h3>AI / Machine Learning</h3>
+              <div class="tags">
+                <span>OpenCV</span>
+                <span>TensorFlow/Keras Basic</span>
+                <span>Computer Vision</span>
+                <span>Image Processing</span>
+              </div>
+            </article>
+            <article class="skill-card reveal">
+              <h3>Backend Development</h3>
+              <div class="tags">
+                <span>Spring Boot Basic</span>
+                <span>Apache Kafka Basic</span>
+                <span>REST APIs</span>
+                <span>Maven</span>
+              </div>
+            </article>
+            <article class="skill-card reveal">
+              <h3>Databases & Analytics</h3>
+              <div class="tags">
+                <span>MySQL</span>
+                <span>H2 Database</span>
+                <span>Pandas</span>
+                <span>Power BI Basic</span>
+              </div>
+            </article>
+            <article class="skill-card reveal">
+              <h3>Tools</h3>
+              <div class="tags">
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>IntelliJ IDEA</span>
+                <span>VS Code</span>
+              </div>
+            </article>
+            <article class="skill-card reveal">
+              <h3>Core Subjects</h3>
+              <div class="tags">
+                <span>OOP</span>
+                <span>DBMS</span>
+                <span>DSA</span>
+                <span>Operating Systems</span>
+                <span>Computer Networks</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="projects">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Projects</p>
+            <h2>Selected work across analytics, AI, and backend systems.</h2>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card reveal">
+              <div class="project-topline">
+                <span class="project-number">01</span>
+                <span class="project-type">Python | MySQL | Pandas</span>
+              </div>
+              <h3>Student Performance Analysis</h3>
+              <p>
+                Designed a relational database for academic and lifestyle information, then used Python and
+                SQL to analyze student performance trends.
+              </p>
+              <ul>
+                <li>Created joins, aggregations, filters, and analytical queries.</li>
+                <li>Integrated MySQL with Python using mysql-connector.</li>
+                <li>Managed the project workflow with Git and GitHub.</li>
+              </ul>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-topline">
+                <span class="project-number">02</span>
+                <span class="project-type">OpenCV | TensorFlow | Keras</span>
+              </div>
+              <h3>Real-Time Emotion Detection</h3>
+              <p>
+                Built a webcam-based facial emotion detection system with image preprocessing and a trained
+                CNN model for emotion classification.
+              </p>
+              <ul>
+                <li>Applied preprocessing to improve prediction quality.</li>
+                <li>Trained and evaluated a deep learning model.</li>
+                <li>Strengthened practical computer vision and deep learning skills.</li>
+              </ul>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-topline">
+                <span class="project-number">03</span>
+                <span class="project-type">Java | Spring Boot | Kafka</span>
+              </div>
+              <h3>Banking Transaction Processing System</h3>
+              <p>
+                Developed backend components during the JPMorgan Chase Software Engineering Job Simulation,
+                focused on transaction processing and service integration.
+              </p>
+              <ul>
+                <li>Implemented Kafka consumer services for transaction flows.</li>
+                <li>Integrated H2 Database and REST API components.</li>
+                <li>Debugged and tested backend application modules.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section-alt" id="education">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Education</p>
+            <h2>Academic foundation in computer science and AI/ML.</h2>
+          </div>
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <div class="timeline-date">2024 - Present</div>
+              <div class="timeline-body">
+                <h3>Jawaharlal Nehru Government Engineering College</h3>
+                <p>Bachelor of Technology, Computer Science Engineering (AI/ML)</p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-date">CBSE</div>
+              <div class="timeline-body">
+                <h3>Class XII</h3>
+                <p>Scored 82%</p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-date">CBSE</div>
+              <div class="timeline-body">
+                <h3>Class X</h3>
+                <p>Scored 82%</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section split-section" id="certifications">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Certifications</p>
+            <h2>Programs that connect learning with applied practice.</h2>
+          </div>
+          <div class="cert-grid">
+            <article class="cert-card reveal">
+              <span>Forage</span>
+              <h3>JPMorgan Chase Software Engineering Job Simulation</h3>
+              <p>Backend engineering simulation covering application components and transaction flows.</p>
+            </article>
+            <article class="cert-card reveal">
+              <span>Learning</span>
+              <h3>AI in Digital Marketing</h3>
+              <p>Explored how AI can support marketing workflows, targeting, analytics, and automation.</p>
+            </article>
+            <article class="cert-card reveal">
+              <span>Languages</span>
+              <h3>English and Hindi</h3>
+              <p>Comfortable communicating, collaborating, and documenting work in both languages.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section-alt" id="experience">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Experience</p>
+            <h2>Leadership and hands-on engineering practice.</h2>
+          </div>
+          <div class="experience-layout">
+            <article class="experience-card reveal">
+              <span class="experience-period">Semesters 1 - 3</span>
+              <h3>Treasurer, College Committee</h3>
+              <p>
+                Managed financial records and budgeting for student activities, coordinated with faculty
+                members and student teams during events, and assisted in organizing multiple college programs.
+              </p>
+            </article>
+            <article class="experience-card reveal">
+              <span class="experience-period">Virtual Experience</span>
+              <h3>Software Engineering Job Simulation</h3>
+              <p>
+                Built and tested backend components with Java, Spring Boot, Apache Kafka, H2 Database, REST
+                APIs, and Maven as part of the JPMorgan Chase simulation.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Contact</p>
+            <h2>Let us build something useful.</h2>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-copy reveal">
+              <p>
+                I am open to internships, learning opportunities, AI/ML projects, backend development work,
+                and collaborations that push technical fundamentals into real applications.
+              </p>
+              <a class="button button-primary" href="mailto:hc91015@gmail.com">
+                <span class="button-icon" aria-hidden="true">@</span>
+                Email Me
+              </a>
+            </div>
+            <div class="contact-links reveal" aria-label="Contact links">
+              <a href="tel:+918219394612">
+                <span>Phone</span>
+                <strong>+91 82193 94612</strong>
+              </a>
+              <a href="mailto:hc91015@gmail.com">
+                <span>Email</span>
+                <strong>hc91015@gmail.com</strong>
+              </a>
+              <a href="https://github.com/harsh2007c" target="_blank" rel="noreferrer">
+                <span>GitHub</span>
+                <strong>github.com/harsh2007c</strong>
+              </a>
+              <a href="https://www.linkedin.com/in/harsh-chaudhary-4168b9376" target="_blank" rel="noreferrer">
+                <span>LinkedIn</span>
+                <strong>harsh-chaudhary-4168b9376</strong>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>(c) 2026 Harsh Chaudhary. Built with HTML, CSS, and JavaScript.</p>
+        <a href="#top" aria-label="Back to top">Back to top</a>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
