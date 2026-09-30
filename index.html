@@ -73,6 +73,68 @@
           </div>
         </section>
 
+        <dialog class="chat-dialog" data-chat-dialog aria-labelledby="chat-title">
+        <section class="chat-section section-alt" id="ai-chat">
+          <div class="section-heading reveal">
+            <p class="eyebrow">AI workspace</p>
+            <h2 id="chat-title">A focused space for useful, private conversations.</h2>
+          </div>
+          <div class="chat-workspace reveal" data-chat-app>
+            <aside class="chat-sidebar" aria-label="Conversation history">
+              <div class="chat-sidebar-header">
+                <div>
+                  <span class="chat-kicker">Workspace</span>
+                  <strong>Conversations</strong>
+                </div>
+                <button class="icon-button" type="button" data-new-chat aria-label="Start a new conversation">+</button>
+              </div>
+              <label class="chat-search">
+                <span class="sr-only">Search conversations</span>
+                <input type="search" data-search-chats placeholder="Search chats" />
+                <span aria-hidden="true">/</span>
+              </label>
+              <div class="conversation-list" data-conversation-list></div>
+              <div class="privacy-note">
+                <span class="status-dot"></span>
+                <span><strong>Local-first</strong> Your chats stay in this browser.</span>
+              </div>
+            </aside>
+            <div class="chat-main">
+              <header class="chat-toolbar">
+                <div class="chat-title">
+                  <span class="assistant-avatar" aria-hidden="true">✦</span>
+                  <div>
+                    <strong data-active-chat-title>New conversation</strong>
+                    <span data-connection-status>Demo mode · ready to help</span>
+                  </div>
+                </div>
+                <div class="chat-toolbar-actions">
+                  <button class="toolbar-button" type="button" data-stop-chat hidden>Stop</button>
+                  <button class="toolbar-button" type="button" data-clear-chat>Clear</button>
+                  <button class="toolbar-button" type="button" data-open-settings>Settings</button>
+                  <button class="toolbar-button" type="button" data-close-chat>Close</button>
+                </div>
+              </header>
+              <div class="chat-messages" data-messages aria-live="polite"></div>
+              <div class="suggestion-row" data-suggestions>
+                <button type="button">Explain a concept</button>
+                <button type="button">Review some code</button>
+                <button type="button">Plan a project</button>
+              </div>
+              <form class="chat-composer" data-chat-form>
+                <label class="composer-input">
+                  <span class="sr-only">Message</span>
+                  <textarea data-message-input rows="1" placeholder="Message your assistant..." required></textarea>
+                  <span class="composer-hint"><kbd>Enter</kbd> to send · <kbd>Shift</kbd> + <kbd>Enter</kbd> for a new line</span>
+                </label>
+                <button class="send-button" type="submit" aria-label="Send message">↑</button>
+              </form>
+              <p class="chat-disclaimer">AI can make mistakes. Check important information. <button type="button" data-open-settings>Configure a provider</button></p>
+            </div>
+          </div>
+        </section>
+        </dialog>
+
         <section class="stats-strip" aria-label="Portfolio highlights">
           <div class="reveal">
             <strong>AI/ML</strong>
@@ -246,6 +308,26 @@
                 <li>Debugged and tested backend application modules.</li>
               </ul>
             </article>
+
+            <article class="project-card project-card-maintenance reveal">
+              <div class="project-topline">
+                <span class="project-number">04</span>
+                <span class="project-type">Under maintenance</span>
+              </div>
+              <h3>AI Chatbot Workspace</h3>
+              <p>
+                A private, provider-ready assistant workspace for project questions, code reviews, and
+                focused conversations.
+              </p>
+              <ul>
+                <li>Conversation history with local-first storage.</li>
+                <li>Provider and model configuration with proxy support.</li>
+                <li>Streaming, markdown rendering, and context controls.</li>
+              </ul>
+              <button class="project-link" type="button" data-open-chat>
+                Preview workspace <span aria-hidden="true">-&gt;</span>
+              </button>
+            </article>
           </div>
         </section>
 
@@ -371,6 +453,59 @@
         <a href="#home" aria-label="Back to top">Back to top</a>
       </footer>
     </div>
+
+    <dialog class="settings-dialog" data-settings-dialog aria-labelledby="settings-title">
+      <form method="dialog" class="settings-panel" data-settings-form>
+        <div class="settings-header">
+          <div>
+            <p class="eyebrow">Connection</p>
+            <h2 id="settings-title">Chat settings</h2>
+          </div>
+          <button class="icon-button" value="cancel" aria-label="Close settings">×</button>
+        </div>
+        <p class="settings-intro">Use demo mode now, connect your own provider, or point the chat at a server-side proxy. Keys are never included in this site’s source code.</p>
+        <label class="setting-field">
+          <span>Provider</span>
+          <select data-provider>
+            <option value="demo">Demo mode (no key)</option>
+            <option value="openai">OpenAI-compatible</option>
+            <option value="anthropic">Anthropic</option>
+            <option value="gemini">Google Gemini</option>
+          </select>
+        </label>
+        <div class="setting-grid">
+          <label class="setting-field">
+            <span>Model</span>
+            <input data-model value="gpt-4o-mini" autocomplete="off" />
+          </label>
+          <label class="setting-field">
+            <span>API key <small>(optional with proxy)</small></span>
+            <input data-api-key type="password" placeholder="Stored locally only" autocomplete="off" />
+          </label>
+        </div>
+        <label class="setting-field">
+          <span>Server-side proxy URL <small>(recommended for production)</small></span>
+          <input data-proxy-url type="url" placeholder="https://your-domain.example/api/chat" autocomplete="url" />
+        </label>
+        <label class="setting-field">
+          <span>System prompt</span>
+          <textarea data-system-prompt rows="3">You are a concise, helpful assistant. Preserve context, be honest about uncertainty, and use markdown when it improves clarity.</textarea>
+        </label>
+        <label class="setting-check">
+          <input data-streaming type="checkbox" checked />
+          <span>Stream responses when supported</span>
+        </label>
+        <label class="setting-check">
+          <input data-save-key type="checkbox" />
+          <span>Remember API key for this browser session <small>(session storage only)</small></span>
+        </label>
+        <div class="settings-security"><span aria-hidden="true">⌁</span><span>Security boundary: direct browser connections expose a key to this device and provider. For shared or production deployments, use the proxy field and keep secrets on your server.</span></div>
+        <div class="settings-actions">
+          <button class="button button-secondary" value="cancel">Cancel</button>
+          <button class="button button-primary" type="button" data-save-settings>Save settings</button>
+        </div>
+      </form>
+    </dialog>
 
     <script src="script.js"></script>
   </body>
